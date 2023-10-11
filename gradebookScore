@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    int students[60];
+
+    for (int i = 0; i < 60; ++i) {
+        students[i] = rand() % 100 + 1;
+        cout << students[i] << "\t";
+    }
+    cout << endl;
+    int maxScore = students[0];
+    for (int i = 0; i < 60; ++i) {
+        if (students[i] > maxScore) {
+            maxScore = students[i];
+        }
+    }
+    cout << "The highest grade is: " << maxScore << endl;
+
+    return 0;
+}
